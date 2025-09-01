@@ -105,3 +105,11 @@ Script processing completed.
 
 =================== [SUCCESS] Took 12.83 seconds ===================
 ```
+## 用jlink ob 解锁 nrf52840
+
+recover_loop_script.bat
+```
+:loop 
+nrfjprog --recover -f nrf52 --log
+goto loop 
+```
