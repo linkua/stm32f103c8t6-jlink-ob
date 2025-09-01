@@ -4,13 +4,23 @@
 hex: OB-STM32_V754_mod-2030-02-02.hex
 驱动：JLink_Linux_V766a_x86_64.deb(linux) or JLink_Windows_V764c_x86_64.exe (win10)
 
+带有 windows jlink驱动的nrf工具：
+nrf-command-line-tools_10_1_1_installer_64.exe
+
+# 注册序列号
+
+通过J-Link Commander修改序列号
+将JLINK通过USB线再次与PC机连接，打开第1步安装的JLINK驱动中的J-Link Commander，输入下面的指令“Exec SetSn = 01234567”回车确认即可
+
+Jlink_ob注册神器_2019.rar
+
 ## swd 接线
 F103C8T6版Jlink OB引脚--------------------目标EVB
-PA10（TDO）-----------------------目标EVB的SWO 
 PA7（TMS-SWDIO）--------------目标EVB的SWDIO
 PA5（TCLK-SWCLK）------------目标EVB的SWCLK
 PA1（nRESET）-------------------目标EVB的Reset
 > IO 中间加 100欧电阻
+> 必要时上拉470欧电阻 reset pin
 
 ## 测试程序
 arduino-blink
