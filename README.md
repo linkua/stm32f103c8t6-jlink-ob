@@ -6,16 +6,16 @@ hex: OB-STM32_V754_mod-2030-02-02.hex
 
 ## swd 接线
 F103C8T6版Jlink OB引脚--------------------目标EVB
-PA10（TDO）-----------------------目标EVB的SWO
+PA10（TDO）-----------------------目标EVB的SWO 
 PA7（TMS-SWDIO）--------------目标EVB的SWDIO
 PA5（TCLK-SWCLK）------------目标EVB的SWCLK
 PA1（nRESET）-------------------目标EVB的Reset
+> IO 中间加 100欧电阻
 
 ## 测试程序
 arduino-blink
 目标板使用 stm32f103c6t6,
 vscode 安装platformio插件打开工程文件夹。
-
 
 ## log
 vscode 点击upload, 终端log 如下
